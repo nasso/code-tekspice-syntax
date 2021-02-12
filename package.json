@@ -6,7 +6,7 @@
   },
   "displayName": "NanoTekSpice Configuration Syntax",
   "description": "Language support for the NanoTekSpice configuration file format.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
