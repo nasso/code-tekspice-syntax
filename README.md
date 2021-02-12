@@ -3,13 +3,13 @@
 Adds language support (syntax + folding) for the NanoTekSpice configuration file
 format, as described in the official subject for the Epitech project (v3.0).
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
+## Preview
 
 ![preview](images/preview.png)
+
+Theme used: [Ayu Dark][Ayu]
+
+[Ayu]: https://marketplace.visualstudio.com/items?itemName=teabyii.ayu
 
 ## Release Notes
 
