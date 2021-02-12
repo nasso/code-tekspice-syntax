@@ -1,0 +1,59 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "NanoTekSpice Configuration",
+  "patterns": [{ "include": "#comment" }, { "include": "#section" }],
+  "repository": {
+    "comment": {
+      "name": "comment.line.nts",
+      "match": "#.*"
+    },
+    "builtin": {
+      "name": "storage.type.nts",
+      "match": "input|clock|true|false|output"
+    },
+    "chipset": {
+      "name": "meta.chipset.nts",
+      "match": "^\\s*(\\w+)\\s+(\\w+)",
+      "captures": {
+        "1": {
+          "patterns": [
+            { "include": "#builtin" },
+            { "name": "support.type", "match": ".*" }
+          ]
+        },
+        "2": { "name": "variable.other" }
+      }
+    },
+    "pin": {
+      "name": "meta.pin.nts",
+      "match": "(\\w+)(\\:)(\\d+)",
+      "captures": {
+        "1": { "name": "variable.other" },
+        "2": { "name": "keyword.operator" },
+        "3": { "name": "constant.numeric" }
+      }
+    },
+    "link": {
+      "name": "meta.link.nts",
+      "match": "^\\s*(.+)\\s+(.+)",
+      "captures": {
+        "1": { "patterns": [{ "include": "#pin" }] },
+        "2": { "patterns": [{ "include": "#pin" }] }
+      }
+    },
+    "section": {
+      "name": "meta.section.nts",
+      "begin": "^\\.\\w+\\:",
+      "end": "(?=^\\.\\w+\\:)",
+      "beginCaptures": {
+        "0": { "name": "entity.name.section.nts" }
+      },
+      "patterns": [
+        { "include": "#comment" },
+        { "include": "#chipset" },
+        { "include": "#link" }
+      ]
+    }
+  },
+  "scopeName": "source.nts"
+}

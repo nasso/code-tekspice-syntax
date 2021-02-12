@@ -1,0 +1,25 @@
+{
+    "name": "tekspice",
+    "displayName": "tekspice",
+    "description": "Language support for the configuration file format (*.nts) of the NanoTekSpice Epitech project.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.53.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "nts",
+            "aliases": ["NanoTekSpice Configuration", "nts"],
+            "extensions": [".nts"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "nts",
+            "scopeName": "source.nts",
+            "path": "./syntaxes/nts.tmLanguage.json"
+        }]
+    }
+}
