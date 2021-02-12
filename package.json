@@ -1,9 +1,12 @@
 {
-  "name": "tekspice",
+  "name": "tekspice-syntax",
   "publisher": "nasso",
-  "displayName": "tekspice",
-  "description": "Language support for the configuration file format (*.nts) of the NanoTekSpice Epitech project.",
-  "version": "0.0.1",
+  "repository": {
+    "url": "https://github.com/nasso/code-tekspice-syntax"
+  },
+  "displayName": "NanoTekSpice Configuration Syntax",
+  "description": "Language support for the NanoTekSpice configuration file format.",
+  "version": "0.1.0",
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
