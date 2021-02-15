@@ -40,7 +40,7 @@
     },
     "link": {
       "name": "meta.link.nts",
-      "match": "^\\s*(.+)\\s+(.+)",
+      "match": "^\\s*([^#]+)\\s+([^#]+)",
       "captures": {
         "1": { "patterns": [{ "include": "#pin" }] },
         "2": { "patterns": [{ "include": "#pin" }] }

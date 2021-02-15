@@ -13,6 +13,14 @@ Theme used: [Ayu Dark][Ayu]
 
 ## Release Notes
 
+### 0.1.2
+
+- Fix comments on link lines
+
+### 0.1.1
+
+- Cleanup README (do I really need a new release for that?)
+
 ### 0.1.0
 
 Initial release
